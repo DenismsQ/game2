@@ -60,7 +60,7 @@ function changePlayer() {
 }
 
 reset.addEventListener("click", function() {
-    for (let i = 0; i < ceil-length; i++) {
+    for (let i = 0; i < ceil.length; i++) {
         ceil[i].innerText = "";
     }
     dataO = [];

@@ -42,12 +42,12 @@
     display: block;
     border: 1px solid black;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: white;
     cursor: pointer;
     transition: all linear .3s;
     margin:0 auto;
     padding: 10px 20px;
 }
-.game-item:hover, #reset-game:hover {
-    background-color: #ccc;
+.game-item:hover,#reset-game:hover {
+    background-color: white;
 }
