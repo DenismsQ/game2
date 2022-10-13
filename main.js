@@ -82,7 +82,7 @@ function checkWin(arr, number) {
             for (let k = 0, kLen = someWinArr.length; k < kLen; k++) {
                 if (arr.indexOf(someWinArr[k]) !== -1) {
                     count++;
-                    if (count ===3) {
+                    if (count === 3) {
                         return true;
                     }
                 }
