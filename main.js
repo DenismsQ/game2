@@ -3,7 +3,9 @@ reset = document.querySelector("#reset-game"),
 message = document.querySelector("#message"),
 
 player = "X",
-
+couterX = 0, 
+draws=0, 
+couterO=0, 
 stepCount = 0,
 
 winCombinations = [
@@ -38,6 +40,15 @@ function currentStep() {
             for (let i = 0; i < ceil.length; i++) {
                 ceil[i].removeEventListener("click", currentStep);
             }
+            if(player == "X"){ 
+                couterX++; 
+                xwin.innerText = "Победы X: "+ couterX; 
+             }else{ 
+                if(player == "O"){ 
+                couterO++; 
+                owin.innerText = "Победы O: "+ couterO; 
+                }  
+             } 
             return (message.innerText = "Победил игрок " + player);
         }
 
@@ -46,7 +57,7 @@ function currentStep() {
         stepCount++;
 
         stepCount === 9
-            ? (message.innerText = "Ничья")
+            ? (message.innerText = "Ничья", draws++, draw.innerText="Ничьи: "+draws)
             : (message.innerText = "Ходит игрок " + player);
     }
 }
@@ -89,5 +100,5 @@ function checkWin(arr, number) {
             }
             count = 0;
         }
-     }
-}
+     } 
+} 
